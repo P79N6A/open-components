@@ -1,6 +1,0 @@
-{
-  "defaultTitle": "标准化组件开发DEMO",
-  "usingComponents": {
-    "carousel-view": "/components/carousel-view/index"
-  }
-}

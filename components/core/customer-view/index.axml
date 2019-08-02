@@ -1,3 +1,0 @@
-<view class="worktab-customer-view-container {{className}}" >
-    <image class="worktab-customer-view-icon" mode="aspectFill" src="{{icon}}" onTap="onCustomerClick"/>
-</view>
