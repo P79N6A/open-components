@@ -1,0 +1,32 @@
+<view>
+  <view class="worktab-carousel-view-container {{className}}" >
+    <block a:if="{{dataSource && dataSource.length > 1}}">
+        <swiper
+            indicator-dots="{{dots}}"
+            autoplay="{{false}}"
+            interval="{{autoplayInterval * 1000}}"
+            circular="{{infinite}}"
+        >
+            <block a:for="{{dataSource}}" a:for-item="bannerItem">
+                <swiper-item>
+                     <view class="worktab-carousel-view-item" onTap="onBannerClick" data-item="{{bannerItem}}">
+                        <image class="worktab-carousel-view-img" mode="aspectFill" style="borderRadius:{{borderRadius? '12px' : '0px'}}" src="{{bannerItem.image}}" />
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </block>
+    <block a:else>
+        <view class="worktab-carousel-view-item" onTap="onBannerClick" data-item="{{dataSource[0]}}">
+            <image class="worktab-carousel-view-img" mode="aspectFill" src="{{dataSource[0] && dataSource[0].image}}" />
+        </view>
+    </block>
+  </view>
+
+  <view class="bottom-btn">
+    <dingui-button type="primary" onDmTap="updateData" size="small" className="dingui-button-large">更新数据</dingui-button>
+  </view>
+  <view class="bottom-btn">
+    <dingui-button type="primary" onDmTap="updateProps" size="small" className="dingui-button-large">更新样式</dingui-button>
+  </view>
+</view>

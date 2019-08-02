@@ -1,0 +1,21 @@
+.worktab-carousel-view-container {
+  position: relative;
+  font-family: PingFangSC-Regular;
+  margin: 16rpx 0 32rpx 0;
+}
+.worktab-carousel-view-container .worktab-carousel-view-item .worktab-carousel-view-img {
+  display: block;
+  margin: 0 auto;
+  width: 686rpx;
+  height: 276rpx;
+}
+
+.bottom-btn {
+  text-align: center;
+  font-size: 12px;
+  padding: 0 16px;
+}
+
+.bottom-btn .dingui-button-large {
+  width: 100%;
+}

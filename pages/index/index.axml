@@ -1,0 +1,12 @@
+<view class="page-index">
+  <block a:for="{{components}}" a:for-item="component">
+  <block a:if="{{component.componentName==='CarouselView'}}">
+      <carousel-view
+        borderRadius="{{component.props.borderRadius}}"
+        dataSource="{{component.props.dataSource}}"
+        onDataService="onDataService"
+        onUpdateProps="onUpdateProps"
+      ></carousel-view>
+  </block>
+</block>
+</view>
