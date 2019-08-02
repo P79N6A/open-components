@@ -1,0 +1,23 @@
+<view class="worktab-carousel-view-container {{className}}" >
+    <block a:if="{{itemList && itemList.length > 1}}">
+        <swiper
+            indicator-dots="{{dots}}"
+            autoplay="{{false}}"
+            interval="{{autoplayInterval * 1000}}"
+            circular="{{infinite}}"
+        >
+            <block a:for="{{itemList}}" a:for-item="bannerItem">
+                <swiper-item>
+                     <view class="worktab-carousel-view-item" onTap="onBannerClick" data-item="{{bannerItem}}">
+                        <image class="worktab-carousel-view-img" mode="aspectFill" style="borderRadius:{{borderRadius}}" src="{{bannerItem.image}}" />
+                    </view>
+                </swiper-item>
+            </block>
+        </swiper>
+    </block>
+    <block a:else>
+        <view class="worktab-carousel-view-item" onTap="onBannerClick" data-item="{{itemList[0]}}">
+            <image class="worktab-carousel-view-img" mode="aspectFill" src="{{itemList[0] && itemList[0].image}}" />
+        </view>
+    </block>
+</view>

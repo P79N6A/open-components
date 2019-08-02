@@ -1,0 +1,20 @@
+<view class="worktab-msg-card-view-container {{className}}">
+    <view a:if="{{showLabel && label}}" class="worktab-msg-card-view-title-area" >
+        <view class="worktab-msg-card-view-title" >
+            {{label}}
+        </view>
+    </view>
+    <block a:if="{{itemList && itemList.length}}" a:for="{{itemList}}" a:for-index="listItemIdx" a:for-item="listItem" >
+        <view class="worktab-msg-card-view-item" onTap="onItemClick" data-item="{{listItem}}">
+            <view class="worktab-msg-card-view-item-content">
+                <view class="worktab-msg-card-view-item-content-title line-clamp2">
+                    {{listItem.title}}
+                </view>
+                <view class="worktab-msg-card-view-item-content-tips line-clamp1">
+                    {{listItem.dateTime}}  {{listItem.source}}
+                </view>
+            </view>
+            <image class="worktab-msg-card-view-item-img" mode="aspectFill" src="{{listItem.image}}" />
+        </view>
+    </block>
+</view>

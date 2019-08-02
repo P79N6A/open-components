@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "enableWK": "YES",
+    "enableDSL": true,
+    "defaultTitle": "",
+    "backgroundColor": "#FFFFFF",
+    "pullRefresh": false,
+    "allowsBounceVertical": "NO"
+  }
+}

@@ -1,0 +1,11 @@
+.worktab-customer-view-container {
+  position: relative;
+  font-family: PingFangSC-Regular;
+}
+.worktab-customer-view-container .worktab-customer-view-icon {
+  position: fixed;
+  bottom: 24rpx;
+  right: 24rpx;
+  width: 104rpx;
+  height: 104rpx;
+}

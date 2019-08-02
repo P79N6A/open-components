@@ -1,0 +1,7 @@
+<view class="page-index">
+  <component-group
+        components="{{ components }}"
+        onTriggerService="onTriggerService"
+      >
+  </component-group>
+</view>

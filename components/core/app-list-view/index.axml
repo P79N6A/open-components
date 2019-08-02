@@ -1,0 +1,17 @@
+<view class="worktab-app-list-view-container {{className}}">
+    <view a:if="{{showLabel && label}}" class="worktab-app-list-view-title-area" >
+        <view class="worktab-app-list-view-title" >
+            {{label}}
+        </view>
+    </view>
+    <view class="worktab-app-list-view-area" >
+        <block a:for="{{itemList}}" a:for-index="listItemIdx" a:for-item="listItem" >
+            <app-item
+                key="appListItem_{{listItemIdx}}"
+                class="worktab-app-list-view-item column{{columnNum}}"
+                itemData="{{listItem}}"
+                onItemClick="onItemClick"
+            ></app-item>
+        </block>
+    </view>
+</view>

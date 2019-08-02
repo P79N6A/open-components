@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "app-list-view": "../app-list-view/index",
+    "dingui-tabs": "@ali/dingui-mini/es/tabs/src/index"
+  }
+}

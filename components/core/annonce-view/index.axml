@@ -1,0 +1,75 @@
+<view class="worktab-annonce-view-container {{className}} {{isMultiList ? 'multi-line' : 'single-line'}}">
+    <view class="worktab-annonce-view-icon" style="backgroundImage:url({{isMultiList ? 'https://gw.alicdn.com/tfs/TB1jJp8XYr1gK0jSZFDXXb9yVXa-144-144.png' : 'https://gw.alicdn.com/tfs/TB1i5lxKOrpK1RjSZFhXXXSdXXa-48-48.png'}})">
+    </view>
+    <view class="worktab-annonce-view-content text-ellipsis" >
+        <block a:if="{{isMultiList}}">
+            <view class="worktab-annonce-view-list-container text-ellipsis" >
+                <swiper
+                        autoplay="{{autoplay}}"
+                        interval="{{autoplayInterval*1000}}"
+                        circular="{{false}}"
+                        vertical="{{true}}"
+                    >
+                        <block a:for="{{multiItemList}}" a:for-index="multiIdx" a:for-item="multiItem" >
+                            <swiper-item>
+                                <block a:for="{{multiItem}}" a:for-index="idx" a:for-item="item">
+                                    <view
+                                        key="noticeList_{{idx}}"
+                                        class="notice-list-item text-ellipsis"
+                                        onTap="onNoticeClick"
+                                        data-value="{{item}}"
+                                        data-index="{{idx}}"
+                                    >
+                                        <view
+                                            key="noticeItem_{{idx}}"
+                                            class="worktab-annonce-view-item text-ellipsis"
+                                            onTap="onItemClick"
+                                            data-item="{{item}}"
+                                        >
+                                            {{item.title}}
+                                        </view>
+                                    </view>
+                                </block>
+                            </swiper-item>
+                        </block>
+                </swiper>
+            </view>
+        </block>
+        <block a:else>
+                <block a:if="{{singleItemList.length > 1}}">
+                    <swiper
+                        autoplay="{{autoplay}}"
+                        interval="{{autoplayInterval}}"
+                        circular="{{false}}"
+                        vertical="{{true}}"
+                    >
+                        <block a:for="{{singleItemList}}" a:for-index="idx" a:for-item="item" >
+                            <swiper-item>
+                                <view class="worktab-annonce-view-single text-ellipsis">
+                                    <view
+                                        class="worktab-annonce-view-item text-ellipsis"
+                                        onTap="onItemClick"
+                                        data-item="{{item}}"
+                                    >
+                                        {{item.title}}
+                                    </view>
+                                </view>
+                            </swiper-item>
+                        </block>
+                    </swiper>
+                </block>
+                <block a:else>
+                    <view class="worktab-annonce-view-single text-ellipsis">
+                        <view
+                            class="worktab-annonce-view-item text-ellipsis"
+                            onTap="onItemClick"
+                            data-item="{{item}}"
+                        >
+                            {{singleItemList && singleItemList[0] && singleItemList[0].title}}
+                        </view>
+                    </view>
+                </block>
+        </block>
+    </view>
+    <view class="worktab-annonce-view-more" onTap="onMoreClick">更多</view>
+</view>

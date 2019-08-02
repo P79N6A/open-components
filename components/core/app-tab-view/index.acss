@@ -1,0 +1,4 @@
+.worktab-app-tab-view-container {
+  position: relative;
+  font-family: PingFangSC-Regular;
+}

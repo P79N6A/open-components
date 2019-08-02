@@ -1,0 +1,22 @@
+{
+  "name": "open-components",
+  "version": "0.0.1",
+  "description": "标准化小组件库",
+  "main": "app.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "标准化小组件库"
+  ],
+  "dependencies": {
+    "dingui-mini": "^1.0.1"
+  },
+  "devDependencies": {},
+  "author": {
+    "name": ""
+  },
+  "private": true
+}

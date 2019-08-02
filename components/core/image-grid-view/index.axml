@@ -1,0 +1,7 @@
+<view class="worktab-image-grid-view-container worktab-image-grid-view-layout{{layout}} {{className}}">
+   <block a:if="{{itemList && itemList.length}}" a:for="{{itemList}}" a:for-index="listItemIdx" a:for-item="listItem" >
+        <view class="worktab-image-grid-view-item " onTap="onItemClick" data-item="{{listItem}}">
+             <image class="worktab-image-grid-view-item-img" mode="aspectFill" src="{{listItem.image}}" />
+        </view>
+   </block>
+</view>

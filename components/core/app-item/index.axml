@@ -1,0 +1,12 @@
+<view class="worktab-app-item-container {{className}}" onTap="onItemClick" data-item="{{itemData}}">
+    <view
+        class="worktab-app-item-icon-area worktab-app-item-icon "
+        style="backgroundImage:url('{{itemData.icon}}')"
+    >
+    </view>
+    <view class="worktab-item-title-area" >
+        <view class="worktab-item-title line-clamp2" >
+            {{itemData.name}}
+        </view>
+    </view>
+</view>

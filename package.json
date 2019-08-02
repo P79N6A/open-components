@@ -1,0 +1,42 @@
+{
+  "name": "open-components",
+  "version": "0.0.1",
+  "description": "标准化组件库",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint src test scripts --ext .js",
+    "tslint": "eslint src test --ext .ts",
+    "tslint:fix": "eslint src test --fix  --ext .ts",
+    "lint:fix": "eslint src test scripts --fix --ext .js .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "dingTalk"
+  ],
+  "dependencies": {
+    "@ali/ding-aplus-logger": "^0.0.6",
+    "@ali/dingtalk-i18n": "^6.0.0",
+    "@ali/dingtalk-jsapi": "^2.6.6",
+    "@ali/dingtalk-medusa": "^8.0.3",
+    "@ali/dingui-mini": "^1.3.3",
+    "@ali/dt-eapp-widget-todo": "^0.0.8",
+    "@ali/retcodelog": "^0.3.0",
+    "@ali/worktab-custom-libs": "^0.0.16",
+    "eventemitter2": "^5.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "pre-commit": "^1.2.2",
+    "typescript": "^3.5.2"
+  },
+  "tnpm": {
+    "mode": "yarn"
+  },
+  "author": {
+    "name": "三衡<kevin.ln@alibaba-inc.com>"
+  },
+  "private": true
+}

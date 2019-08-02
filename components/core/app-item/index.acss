@@ -1,0 +1,78 @@
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.line-clamp2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.line-clamp1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.worktab-app-item-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: PingFangSC-Regular;
+  padding-top: 16rpx;
+  padding-bottom: 20rpx;
+}
+.worktab-app-item-container .worktab-app-item-icon-area {
+  position: relative;
+  margin: auto;
+  width: 114rpx;
+  height: 114rpx;
+  border-radius: 28.5rpx;
+  background-color: #f8f8f8;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.worktab-app-item-container .worktab-app-item-icon-area::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  height: 200%;
+  border-radius: 57rpx;
+  border: 2rpx solid rgba(25, 31, 37, 0.08);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.worktab-app-item-container:active .worktab-app-item-icon-area::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 114rpx;
+  height: 114rpx;
+  background: rgba(25, 31, 37, 0.28);
+  border-radius: 28.5rpx;
+  /*让事件穿透这个层，修复加上覆盖态后导致响应不灵敏问题*/
+  pointer-events: none;
+}
+.worktab-app-item-container .worktab-item-title-area {
+  margin-top: 16rpx;
+  padding: 0 10rpx;
+}
+.worktab-app-item-container .worktab-item-title-area .worktab-item-title {
+  font-size: 24rpx;
+  color: #191F25;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 32rpx;
+}

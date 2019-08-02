@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "demo-view": "../core/demo-view/index"
+  }
+}

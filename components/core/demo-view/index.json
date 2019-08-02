@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "dingui-list": "@ali/dingui-mini/es/list/src/index",
+    "dingui-list-item": "@ali/dingui-mini/es/list-item/src/index",
+    "dingui-button": "@ali/dingui-mini/es/button/src/index",
+    "dingui-switch": "@ali/dingui-mini/es/switch/src/index",
+    "dingui-icon": "@ali/dingui-mini/es/icon/src/index",
+    "dingui-button": "@ali/dingui-mini/es/button/src/index"
+  }
+}

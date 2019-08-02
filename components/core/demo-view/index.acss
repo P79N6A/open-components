@@ -1,0 +1,14 @@
+.dingui-demo {
+  flex: 1;
+  margin-bottom: 80rpx;
+  background-color: #f6f6f6;
+}
+
+.bttom-btn {
+  text-align: center;
+  font-size: 12px;
+}
+
+.dingui-list-body {
+  padding: 0px 0px 20px;
+}

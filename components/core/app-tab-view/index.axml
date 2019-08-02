@@ -1,0 +1,22 @@
+<view class="worktab-app-tab-view-container {{className}}">
+     <dingui-tabs
+        texts="{{tabsTextArr}}"
+        activeIndex="{{withSwiperTabActiveIndex}}"
+        onDmItemTap="onWithSwiperTabItemTap"
+    ></dingui-tabs>
+    <swiper onChange="onSwiperChange" current="{{withSwiperTabActiveIndex}}" style="minHeight:{{miniSwiperHeight}};">
+        <block a:for="{{dataSource}}" a:for-index="idx" a:for-item="dataItem" >
+            <swiper-item class="apptab-swiper-item-{{idx}}">
+                <app-list-view
+                    key="appTab_listview_{{idx}}"
+                    tabIndex="{{idx}}"
+                    corpId="{{corpId}}"
+                    columnNum="{{columnNum}}"
+                    dataSource="{{dataItem.items}}"
+                    lwpFetchParams="{{lwpFetchParams}}"
+                    onDataRenderSuccess="onDataRenderSuccess"
+                ></app-list-view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
